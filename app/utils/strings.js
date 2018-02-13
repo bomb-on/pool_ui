@@ -40,7 +40,7 @@ return function(seconds) {
 
 .filter('difficultyToHashRate', function() {
   return function(hashrate) {
-    return Math.floor(hashrate / 60)
+    return Math.floor(hashrate / 90)
   };
 
 

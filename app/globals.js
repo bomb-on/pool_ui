@@ -4,8 +4,8 @@ angular.module('pool.globals', [])
 
 .factory('GLOBALS', function() {
 	return {
-		pool_name: "supportXLC.com",
-		api_url : 'http://xlc2.jbarbieri.net/api',
+		pool_name: "Bathmat's BitCoal Pool",
+		api_url : 'http://coal.bathmatminingpools.com/api',
 		api_refresh_interval: 30000,
 		app_update_interval: 10*60000
 	};

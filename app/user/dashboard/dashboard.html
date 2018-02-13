@@ -54,6 +54,10 @@
 										<p> Hash Rate </p>
 										<p class="text-right">{{ poolStats[pooltype].pool_statistics.hashRate | toHashRate }}</p>
 									</md-list-item>
+									<!--                                                                        <md-list-item>
+                                                                                                                    <p> Current Effort </p>
+                                                                                                                    <p class="text-right">{{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(1)| number}}%</p>
+                                                                                                            </md-list-item> -->
 									<md-list-item>
 										<p> Height </p>
 										<p class="text-right">{{poolStats[pooltype].pool_statistics.lastBlockFound | number}}</p>
@@ -80,9 +84,17 @@
 							<div layout-xs="row" layout-sm="row" layout="column" flex>
 								<md-list flex>
 									<md-list-item>
-										<p> Fees </p>
-										<p class="text-right">{{ poolStats[pooltype].pool_statistics.fee }} %</p>
+										<p> Current Effort </p>
+										<p class="text-right">{{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(1)| number}}%</p>
 									</md-list-item>
+									<md-list-item>
+										<p> Block Every </p>
+										<p class="text-right">{{((network.difficulty / poolStats[pooltype].pool_statistics.hashRate)/60).toFixed(1) | number}} minutes (est.)</p>
+									</md-list-item>
+									<!--                                                                    <md-list-item>
+                                                                                                                    <p> Fees </p>
+                                                                                                                    <p class="text-right">{{ poolStats[pooltype].pool_statistics.fee }} %</p>
+                                                                                                            </md-list-item> -->
 									<md-list-item>
 										<p> Blocks Found </p>
 										<p class="text-right">{{ poolStats[pooltype].pool_statistics.totalBlocksFound || '0' }}</p>
@@ -91,14 +103,18 @@
 										<p> Miners </p>
 										<p class="text-right">{{ poolStats[pooltype].pool_statistics.miners || '0' }}</p>
 									</md-list-item>
+									<!--            <md-list-item>
+                                                            <p> Miners Paid </p>
+                                                            <p class="text-right">{{ poolStats[pooltype].pool_statistics.totalMinersPaid || '0' }}</p>
+                                                    </md-list-item> -->
 									<md-list-item>
-										<p> Miners Paid </p>
-										<p class="text-right">{{ poolStats[pooltype].pool_statistics.totalMinersPaid || '0' }}</p>
+										<p> PPLNS Window </p>
+										<p class="text-right">{{((network.difficulty*2 / poolStats[pooltype].pool_statistics.hashRate)/60).toFixed(0) | number}} minutes</p>
 									</md-list-item>
-									<md-list-item>
-										<p> Payments sent </p>
-										<p class="text-right">{{ poolStats[pooltype].pool_statistics.totalPayments || '0' }}</p>
-									</md-list-item>
+									<!--            <md-list-item>
+                                                            <p> Payments sent </p>
+                                                            <p class="text-right">{{ poolStats[pooltype].pool_statistics.totalPayments || '0' }}</p>
+                                                    </md-list-item> -->
 								</md-list>
 							</div>
 						</div>
@@ -165,10 +181,10 @@
 				</div>
 				<div flex layout="column" layout-gt-xs="row">
 					<div flex>
-						<h4> Total Due<h2>{{miner.amtDue | toXMR | number:10}} XLC</h2></h4>
+						<h4> Total Due<h2>{{miner.amtDue | toXMR | number:10}} COAL</h2></h4>
 					</div>
 					<div flex>
-						<h4> Total Paid<h2>{{miner.amtPaid | toXMR | number:10}} XLC</h2></h4>
+						<h4> Total Paid<h2>{{miner.amtPaid | toXMR | number:10}} COAL</h2></h4>
 					</div>
 				</div>
 			</div>

@@ -1,4 +1,4 @@
-# Monero Pool frontend
+# Forknote Pool frontend
 
 ### AngularJS based UI for [nodejs-pool](https://github.com/Snipa22/nodejs-pool)
 
@@ -33,13 +33,12 @@ $ npm install # runs everything, serve from ./build
 * Network stats page.
 * Ship it deployment
 * Websockets
-* Miner graph colour picker
-
-### Support
-* I'm usually on supportaeon.com so drop me a line if you need help with something or have a feature request.
+* Miner graph color picker
 
 #### Coffee :P ?
 #XMR
-4AYuDc4cEqxfxVTUFwVqPd4JdmKLjm9dNhTjuT6Ud5gQa564wp6cxMBWbwaVe4vUMveKAzAiA4j8xgUi29TpKXpm3zc3jmn
-#AEON
-WmtWzE4zej7FLjctgMPk7Va7hiiESJF5xHfmb5KZaMAhHDSRU51pqTJQiVFZgRMmrga9KvqPg48EZTEVQ9qA47o52MYgiMqaw
+45aoLFsZtu9MepSoWhNFN7YmUQeA4NsopN4BBaRjhrN63JrrJvBpM2EBPFAS1JNGPBCx7fdjA2JzPB5Fc129JmD6HNtCbyb
+#ETN
+etnkKbCMXZ6cPGkkjxKEEZLH7YwpzQb5fVKnkkkYkF4NRxhXHvwNwGw3mFuwDREeN46Z8QLqGpNRMj2rHHVHnSad6ZijNTQczj
+#XLC
+LnNcuQRGbQ2MXd5m9Lyx1LCxoxDVBs1E1PNEc62EubjYdjPmbwkUdanEH1EJNqAUx22tNmauexNVk62TA7sv3C4S7L9g7Vo

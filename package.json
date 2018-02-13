@@ -1,6 +1,6 @@
 {
-  "name": "xmrpoolui",
-  "description": "UI for XMR Pool.net",
+  "name": "poolui",
+  "description": "UI for nodejs Forknote Pools",
   "repository": "",
   "license": "?",
   "devDependencies": {
