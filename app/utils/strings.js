@@ -4,7 +4,7 @@ angular.module('utils.strings', [])
 
 .filter('toXMR', function() {
   return function(amount) {
-    return amount / 100;
+    return amount / 1000000000000;
   };
 })
 

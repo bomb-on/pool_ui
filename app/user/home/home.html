@@ -13,7 +13,7 @@
 
 	<md-card flex>
 		<md-card-title>
-			<span class="md-headline">Block Effort (last 25 blocks) | Round Effort {{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(1) | number}} %</span>
+			<span class="md-headline">Block Effort (last 25 blocks) | Current Effort {{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(1) | number}} %</span>
 		</md-card-title>
 		<md-card-content layout="column">
 			<div class="chartcontainer-pool" flex>
@@ -84,7 +84,7 @@
 					</md-list-item>
 					<md-list-item>
 						<p>PPLNS window</p>
-						<p class="text-right">{{((network.difficulty*2 / poolStats.global.hashRate)/60).toFixed(0) | number}} minutes</p>
+						<p class="text-right">{{((network.difficulty*4 / poolStats.global.hashRate)/60).toFixed(0) | number}} minutes</p>
 					</md-list-item>
 					<md-list-item>
 						<p>Block maturity depth</p>
