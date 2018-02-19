@@ -68,15 +68,15 @@
                     </md-list-item>-->
 					<md-list-item>
 						<p>Minimum payout (wallet)</p>
-						<p class="text-right">{{config.min_wallet_payout | toXMR}} XLC</p>
+						<p class="text-right">{{config.min_wallet_payout | toXMR}} GLOBALS.coin_abbr</p>
 					</md-list-item>
 					<!--<md-list-item>
                             <p>Minimum payout (BTC)</p>
-                            <p class="text-right">{{config.min_btc_payout | toXMR}} XLC</p>
+                            <p class="text-right">{{config.min_btc_payout | toXMR}} GLOBALS.coin_abbr</p>
                     </md-list-item>-->
 					<md-list-item>
 						<p>Minimum payout (exchange)</p>
-						<p class="text-right">{{config.min_exchange_payout | toXMR}} XLC</p>
+						<p class="text-right">{{config.min_exchange_payout | toXMR}} GLOBALS.coin_abbr</p>
 					</md-list-item>
 					<md-list-item>
 						<p>Payout interval</p>
@@ -84,7 +84,7 @@
 					</md-list-item>
 					<md-list-item>
 						<p>PPLNS window</p>
-						<p class="text-right">{{((network.difficulty*4 / poolStats.global.hashRate)/60).toFixed(0) | number}} minutes</p>
+						<p class="text-right">{{((network.difficulty*2 / poolStats.global.hashRate)) | convertedTime}}</p>
 					</md-list-item>
 					<md-list-item>
 						<p>Block maturity depth</p>

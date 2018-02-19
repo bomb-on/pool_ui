@@ -59,16 +59,16 @@
                                                                                                                     <p class="text-right">{{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(1)| number}}%</p>
                                                                                                             </md-list-item> -->
 									<md-list-item>
-										<p> Height </p>
-										<p class="text-right">{{poolStats[pooltype].pool_statistics.lastBlockFound | number}}</p>
-									</md-list-item>
-									<md-list-item>
 										<p> Last Block </p>
 										<p class="text-right truncate"><span ng-bind-html="lastBlock[pooltype].hash | hashToLink: 'block'"></span></p>
 									</md-list-item>
 									<md-list-item>
-										<p> Block Reward </p>
-										<p class="text-right">{{lastBlock[pooltype].value | toXMR | number:10}} XLC</p>
+									<md-list-item>
+										<p> Height </p>
+										<p class="text-right">{{poolStats[pooltype].pool_statistics.lastBlockFound | number}}</p>
+									</md-list-item>
+											<p> Block Reward </p>
+										<p class="text-right">{{lastBlock[pooltype].value | toXMR | number:10}} GLOBALS.coin_abbr</p>
 									</md-list-item>
 									<md-list-item>
 										<p> Time Found </p>
@@ -84,32 +84,36 @@
 							<div layout-xs="row" layout-sm="row" layout="column" flex>
 								<md-list flex>
 									<md-list-item>
+										<p> Network Percentage </p>
+										<p class="text-right">{{(((poolStats[pooltype].pool_statistics.hashRate) / (network.difficulty | difficultyToHashRate)*100).toFixed(1)) | number}}%</p>
+									</md-list-item>
+									<md-list-item>
 										<p> Current Effort </p>
 										<p class="text-right">{{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(1)| number}}%</p>
 									</md-list-item>
 									<md-list-item>
 										<p> Block Every </p>
-										<p class="text-right">{{((network.difficulty / poolStats[pooltype].pool_statistics.hashRate)/60).toFixed(1) | number}} minutes (est.)</p>
+										<p class="text-right">{{((network.difficulty / poolStats[pooltype].pool_statistics.hashRate)) | convertedTime}} (est.)</p>
 									</md-list-item>
-									<!--                                                                    <md-list-item>
-                                                                                                                    <p> Fees </p>
-                                                                                                                    <p class="text-right">{{ poolStats[pooltype].pool_statistics.fee }} %</p>
-                                                                                                            </md-list-item> -->
+									<!--    <md-list-item>
+                                            	<p> Fees </p>
+                                            	<p class="text-right">{{ poolStats[pooltype].pool_statistics.fee }} %</p>
+                                         	</md-list-item> -->
 									<md-list-item>
 										<p> Blocks Found </p>
 										<p class="text-right">{{ poolStats[pooltype].pool_statistics.totalBlocksFound || '0' }}</p>
 									</md-list-item>
 									<md-list-item>
-										<p> Miners </p>
+									<!--	<p> Miners </p>
 										<p class="text-right">{{ poolStats[pooltype].pool_statistics.miners || '0' }}</p>
-									</md-list-item>
+									</md-list-item> -->
 									<!--            <md-list-item>
                                                             <p> Miners Paid </p>
                                                             <p class="text-right">{{ poolStats[pooltype].pool_statistics.totalMinersPaid || '0' }}</p>
                                                     </md-list-item> -->
 									<md-list-item>
 										<p> PPLNS Window </p>
-										<p class="text-right">{{((network.difficulty*4 / poolStats[pooltype].pool_statistics.hashRate)/60).toFixed(0) | number}} minutes</p>
+										<p class="text-right">{{((network.difficulty*2 / poolStats[pooltype].pool_statistics.hashRate)) | convertedTime}}</p>
 									</md-list-item>
 									<!--            <md-list-item>
                                                             <p> Payments sent </p>

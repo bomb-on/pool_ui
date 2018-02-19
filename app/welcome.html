@@ -1,4 +1,13 @@
 <md-card-content>
 	<div class="md-headline">Welcome to {{GLOBALS.pool_name}}</div>
-	<h3>Update welcome content in app/welcome.html</h3>
+<!--	<h3>Update welcome content in app/welcome.html</h3> -->
+	<div layout="column" layout-gt-md="row" flex>
+		<md-card flex-gt-md="30" flex>
+			<h3>Market Stats</h3>
+			<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+			<div class="coinmarketcap-currency-widget" data-currency="leviarcoin" data-base="BTC" data-secondary="USD" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="BTC" data-statsticker="false"></div>
+			<script type="text/javascript" src="https://files.coinmarketcap.com/static/widget/currency.js"></script>
+			<div class="coinmarketcap-currency-widget" data-currency="bitcoin" data-base="USD" data-ticker="false" data-rank="false" data-marketcap="false" data-volume="false" data-stats="USD" data-statsticker="false"></div>
+		</md-card>
+	</div>
 </md-card-content>

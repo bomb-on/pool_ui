@@ -14,7 +14,8 @@ return function(seconds) {
     var hours = Math.floor((seconds % 86400) / 3600);
     var mins = Math.floor(((seconds % 86400) % 3600) / 60);
     var secs = ((seconds % 86400) % 3600) % 60;
-    return (days > 0 ? days+'d ' : '') + ('00'+hours).slice(-2) +':' + ('00'+mins).slice(-2)+':' + ('00'+secs).slice(-2);
+//    return (days > 0 ? days+'d ' : '') + ('00'+hours).slice(-2) +':' + ('00'+mins).slice(-2)+':' + ('00'+secs).slice(-2);
+    return (days > 0 ? days+' days ' : '') + (hours > 0 ? ('00'+hours).slice(-2)+' hours ' : '') + (mins > 0 ? ('00'+mins).slice(-2)+' minutes' : '');
     };
 })
 
