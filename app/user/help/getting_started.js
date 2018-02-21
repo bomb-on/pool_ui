@@ -37,8 +37,8 @@ app.controller('GettingStartedCtrl', function($scope, $mdDialog, dataService) {
 		desc: 'Standard wallet address with fixed difficulty of 3500 for the worker',
 		valid: true
 	},
-	{
-/*		type: 'Username',
+/*	{
+		type: 'Username',
 		sample: '4DAU4uMdnDtFkY5rsMQaLwbRNaxLZVvc4LJZt7Cx9Dt23frL6aut2uC3PsMiwGY5C5fKLSn6sWyoxRQTK1dhdBpKF82nvn2H6jg9SUywAX',
 		desc: 'Integrated address, good for withdrawing to an exchange (eg. Poloniex, Kraken, TuxExchange), or if you want to use an integrated address',
 		valid: true
@@ -72,7 +72,7 @@ app.controller('GettingStartedCtrl', function($scope, $mdDialog, dataService) {
 		sample: 'Steve:test@e-mail.com',
 		desc: 'Miner identifier of Steve, and register an account with the e-mail address as password',
 		valid: true
-	},
+	}
 	/*{ // removed because it may confuse people
 		type: 'Password',
 		sample: 'test@e-mail.com',
