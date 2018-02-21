@@ -63,12 +63,12 @@
 										<p class="text-right truncate"><span ng-bind-html="lastBlock[pooltype].hash | hashToLink: 'block'"></span></p>
 									</md-list-item>
 									<md-list-item>
-									<md-list-item>
 										<p> Height </p>
 										<p class="text-right">{{poolStats[pooltype].pool_statistics.lastBlockFound | number}}</p>
 									</md-list-item>
-											<p> Block Reward </p>
-										<p class="text-right">{{lastBlock[pooltype].value | toXMR | number:10}} GLOBALS.coin_abbr</p>
+									<md-list-item>
+													<p> Block Reward </p>
+										<p class="text-right">{{lastBlock[pooltype].value | toXMR | number:10}} {{GLOBALS.coin_abbr}}</p>
 									</md-list-item>
 									<md-list-item>
 										<p> Time Found </p>
