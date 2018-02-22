@@ -89,7 +89,11 @@
 									</md-list-item>
 									<md-list-item>
 										<p> Current Effort </p>
-										<p class="text-right">{{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(1)| number}}%</p>
+										<p class="text-right">{{(100 * poolStats.global.roundHashes / network.difficulty).toFixed(1)| number}}%
+										<md-tooltip>
+											{{poolStats.global.roundHashes | number}}
+										</md-tooltip>
+										</p>
 									</md-list-item>
 									<md-list-item>
 										<p> Block Every </p>

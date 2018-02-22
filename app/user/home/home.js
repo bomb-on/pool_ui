@@ -6,7 +6,7 @@ app.controller('HomeCtrl', function($scope, $route, dataService, timerService) {
         dataService.getData("/pool/chart/hashrate/pplns", function(data){
             data = _.forEach(data, function(element) {
                 element.ts = new Date(element.ts);
-		element.hs = element.hs/1000000;
+		element.hs = element.hs/1000;
             });
 
             $scope.poolHashrateChart = {
