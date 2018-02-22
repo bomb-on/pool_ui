@@ -34,7 +34,7 @@
 					</md-tooltip>
 				</td>
 				<td md-cell><p class="md-body-2">{{payment.pt}}</p></td>
-				<td md-cell><p class="md-body-2">{{payment.amount | toXMR }} COAL</p></td>
+				<td md-cell><p class="md-body-2">{{payment.amount | toXMR }} {{GLOBALS.coin_abbr}}</p></td>
 				<td md-cell ng-bind-html="payment.txnHash | hashToLink: 'tx'"></td>
 				<td md-cell><p class="md-body-2">{{payment.mixin}}</p></td>
 			  </tr>

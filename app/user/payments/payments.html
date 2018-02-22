@@ -30,8 +30,8 @@
 							</md-tooltip>
 						</td>
 						<td md-cell><p class="md-body-2 truncate" ng-bind-html="payment.hash | hashToLink: 'transaction'"></p></td>
-						<td md-cell><p class="md-body-2 nowrap">{{payment.value | toXMR}} COAL</p></td>
-						<td md-cell><p class="md-body-2 nowrap">{{payment.fee | toXMR }} COAL</p></td>
+						<td md-cell><p class="md-body-2 nowrap">{{payment.value | toXMR}} {{GLOBALS.coin_abbr}}</p></td>
+						<td md-cell><p class="md-body-2 nowrap">{{payment.fee | toXMR }} {{GLOBALS.coin_abbr}}</p></td>
 						<td md-cell><p class="md-body-2 nowrap">{{payment.mixins}}</p></td>
 						<td md-cell><p class="md-body-2 nowrap">{{payment.payees}}</p></td>
 					  </tr>
