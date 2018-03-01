@@ -129,6 +129,14 @@ md-tooltip .md-content {
   margin: 0px;
 }
 
+.sidenav md-menu {
+  padding: 0px;
+  width: 100%;
+  text-align: left;
+  color: #fff;
+  margin: 0px;
+}
+
 .sidebar {
   display: flex;
   flex-wrap: nowrap;
