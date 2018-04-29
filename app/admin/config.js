@@ -1,32 +1,30 @@
-'use strict';
+app.controller('AdminConfigCtrl', function ($scope, $location, $route, $mdDialog, dataService) {
+  $scope.selected = [];
 
-app.controller('AdminConfigCtrl', function($scope, $location, $route, $mdDialog, dataService) {
-	$scope.selected = [];
+  const loadConfig = function () {
+    dataService.getData('/admin/config', function (data) {
+      $scope.pool_configs = data;
+    });
+  };
 
-	var loadConfig = function () {
-		dataService.getData("/admin/config", function(data) {
-			$scope.pool_configs = data;
-		});
-	}
+  $scope.editConfig = function (ev, config) {
+    $mdDialog.show({
+      locals: {
+        config: config,
+      },
+      clickOutsideToClose: true,
+      controller: 'editConfigCtrl',
+      controllerAs: 'ctrl',
+      focusOnOpen: false,
+      targetEvent: ev,
+      templateUrl: 'admin/editconfig.html',
+    }).then(function () {
+      loadConfig();
+    }, function () {
+      // error
+    });
 
-	$scope.editConfig = function (ev, config) {
-		$mdDialog.show({
-			locals: {
-				config: config
-			},
-			clickOutsideToClose: true,
-			controller: 'editConfigCtrl',
-			controllerAs: 'ctrl',
-			focusOnOpen: false,
-			targetEvent: ev,
-			templateUrl: 'admin/editconfig.html',
-		}).then (function () {
-			loadConfig();
-		}, function(){
-			// error
-		})
+  };
 
-	};
-
-	loadConfig();
+  loadConfig();
 });

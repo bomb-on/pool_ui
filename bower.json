@@ -1,5 +1,5 @@
 {
-  "name": "xmrpoolui",
+  "name": "pool_ui",
   "private": true,
   "dependencies": {
     "angular": "~1.6.1",
@@ -16,7 +16,7 @@
     "chart.js": "^2.4.0",
     "lodash": "^4.17.4",
     "angular_page_visibility": "angular-page-visibility#^0.0.4",
-    "font-awesome": "^4.7.0"
+    "font-awesome": "^5.0.10"
   },
   "resolutions": {
     "angular": "~1.6.1"

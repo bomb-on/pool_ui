@@ -4,12 +4,12 @@
 <!--[if IE 8]>         <html lang="en" ng-app="poolui" class="no-js lt-ie9" manifest="app.manifest"> <![endif]-->
 <!--[if gt IE 8]><!--> <html lang="en" ng-app="poolui" class="no-js" manifest="app.manifest"> <!--<![endif]-->
 <head>
-    <title>Bathmat Mining Pools</title>
+  <title>{{GLOBALS.coin_abbr}} Mining Pool</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-  <meta name="description" content="Welcome to Bathmat Mining Pools! Your new home for awesome Cryptonote Mining!">
-  <meta name="keywords" content="cryptonote, mining, pool, pplns, block, payments, payouts, reward, hash, hashrate, xmr-stak">
+  <meta name="description" content="Welcome to Mining Pool!">
+  <meta name="keywords" content="mining, pool, pplns, block, payments, payouts, reward, hash, hashrate">
   <meta name="google-site-verification" content="8fsduyK9_KF2zKQiMQL7i8Fp_JkyR8MTFqcBtT52QtI">
   <!-- CSS -->
   <link rel="stylesheet" href="vendor/angular-material/angular-material.css">
@@ -21,7 +21,7 @@
   <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,600,700" rel="stylesheet">
   <link rel="stylesheet" href="assets/css/font-awesome.min.css">
   <!-- Favicon -->
- <link href="" type="image/png" rel="icon">
+  <link href="" type="image/png" rel="icon">
   <!-- CHAT -->
 
 </head>
@@ -33,8 +33,8 @@
       <div class="container" layout="row" flex>
         <md-sidenav md-is-locked-open="menuOpen" md-component-id="left" md-whiteframe="4" class="sidenav">
           <md-toolbar class="logo">
-			<span class="md-toolbar-tools" style="text-align: center; position: ">
-				<strong>{{GLOBALS.pool_name}}</strong>
+			<span class="md-toolbar-tools" style="text-align: center;">
+			  <strong>{{GLOBALS.pool_name}}</strong>
 			</span>
           </md-toolbar>
           <md-list>
@@ -62,18 +62,12 @@
                 Payments
               </md-button>
             </md-list-item>
-              <md-list-item>
-                  <md-button href="#/ports" ng-class="isActivePage('ports')">
-                      <md-icon md-font-set="material-icons" class="menu-item">flight_land</md-icon>
-                      Ports
-                  </md-button>
-              </md-list-item>
-     <!--    <md-list-item>
-              <md-button href="#/network" ng-class="isActivePage('network')">
-                <md-icon md-font-set="material-icons" class="menu-item">language</md-icon>
-                Network
+            <md-list-item>
+              <md-button href="#/ports" ng-class="isActivePage('ports')">
+                 <md-icon md-font-set="material-icons" class="menu-item">flight_land</md-icon>
+                 Ports
               </md-button>
-            </md-list-item>-->
+            </md-list-item>
             <md-list-item>
               <md-button href="#/help/chat" ng-class="isActivePage('support')">
                 <md-icon md-font-set="material-icons" class="menu-item">group</md-icon>
@@ -86,48 +80,6 @@
                 Getting Started
               </md-button>
             </md-list-item>
-              <md-list-item>
-                  <md-menu>
-                      <md-button>
-                          <md-icon md-font-set="material-icons" class="menu-item">pool</md-icon>
-                          Pools
-                      </md-button>
-                        <md-menu-content width="3">
-                            <md-menu-item>
-                                <md-button href="http://leviar.bathmatminingpools.com" target="_blank">
-                                LeviarCoin
-                                </md-button>
-                            </md-menu-item>
-                            <md-menu-item>
-                                <md-button href="http://turtle.bathmatminingpools.com" target="_blank">
-                                    TurtleCoin
-                                </md-button>
-                            </md-menu-item>
-                            <md-menu-item>
-                                <md-button href="http://stellite.bathmatminingpools.com" target="_blank">
-                                    Stellite
-                                </md-button>
-                            </md-menu-item>
-                            <md-menu-item>
-                                <md-button href="http://coal.bathmatminingpools.com" target="_blank">
-                                    BitCoal
-                                </md-button>
-                            </md-menu-item>
-                        </md-menu-content>
-                  </md-menu>
-              </md-list-item>
-              <!--              <md-list-item>
-                                         <md-button href="#/help/config_generator" ng-class="isActivePage('help/config_generator')">
-                                                 <md-icon md-font-set="material-icons" class="menu-item">brush</md-icon>
-                                                 Config generator
-                                               </md-button>
-                                             </md-list-item> -->
-    <!--        <md-list-item>
-              <md-button href="#/help/faq" ng-class="isActivePage('help/faq')">
-                <md-icon md-font-set="material-icons" class="menu-item">help_outline</md-icon>
-                FAQ
-              </md-button>
-            </md-list-item>-->
           </md-list>
         </md-sidenav>
 
@@ -153,7 +105,7 @@
           </md-toolbar>
           <div id="content" ng-view flex></div>
 		<div class="footer">
-		powered by <strong><a href="https://github.com/Snipa22/nodejs-pool"><i class="fa fa-github"></i> nodejs-pool</a></strong> &amp; <strong><a href="https://github.com/mesh0000/poolui"><i class="fa fa-github"></i> poolui</a></strong></br> <span style="font-size: 90%">(mod by <b>Bathmat</b>)</span>
+		powered by <strong><a href="https://github.com/Snipa22/nodejs-pool"><i class="fa fa-github"></i> nodejs-pool</a></strong> &amp; <strong><a href="https://github.com/mesh0000/poolui"><i class="fa fa-github"></i> poolui</a></strong></span>
 		</div>
         </md-content>
       </div>
@@ -174,6 +126,9 @@
       <script src="vendor/ngstorage/ngStorage.js"></script>
       <script src="vendor/angular-moment/angular-moment.js"></script>
       <script src="vendor/angular-audio/app/angular.audio.js"></script>
+      <script src="vendor/font-awesome/svg-with-js/js/fontawesome-all.min.js"></script>
+      <script src="vendor/font-awesome/svg-with-js/js/fa-brands.min.js"></script>
+      <script src="vendor/font-awesome/svg-with-js/js/fa-solid.min.js"></script>
       <script src="globals.js"></script>
       <script src="utils/strings.js"></script>
       <script src="utils/services.js"></script>

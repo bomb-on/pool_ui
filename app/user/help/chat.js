@@ -1,4 +1,1 @@
-'use strict';
-
-app.controller('ChatCtrl', function() {
-});
+app.controller('ChatCtrl', function () {});
