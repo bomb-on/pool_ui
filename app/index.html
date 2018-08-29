@@ -10,7 +10,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
   <meta name="description" content="Welcome to Mining Pool!">
   <meta name="keywords" content="mining, pool, pplns, block, payments, payouts, reward, hash, hashrate">
-  <meta name="google-site-verification" content="8fsduyK9_KF2zKQiMQL7i8Fp_JkyR8MTFqcBtT52QtI">
+
   <!-- CSS -->
   <link rel="stylesheet" href="vendor/angular-material/angular-material.css">
   <link rel="stylesheet" href="vendor/n3-charts/build/LineChart.css">
@@ -33,50 +33,51 @@
       <div class="container" layout="row" flex>
         <md-sidenav md-is-locked-open="menuOpen" md-component-id="left" md-whiteframe="4" class="sidenav">
           <md-toolbar class="logo">
-			<span class="md-toolbar-tools" style="text-align: center;">
-			  <strong>{{GLOBALS.pool_name}}</strong>
-			</span>
+            <a href="https://go-mine.it/">
+              <span class="md-toolbar-tools">
+                <strong>{{GLOBALS.pool_name}}</strong>
+              </span>
+            </a>
           </md-toolbar>
           <md-list>
             <md-list-item>
+              <div class="pool-item">
+                <img src="assets/coin.png"> <strong>Coin [COIN]</strong>
+              </div>
+            </md-list-item>
+            <md-list-item>
               <md-button href="#/home" ng-class="isActivePage('home')">
-                <md-icon md-font-set="material-icons" class="menu-item">home</md-icon>
+                <md-icon md-font-set="fas fa-home fa-fw" class="menu-item"></md-icon>
                 Home
               </md-button>
             </md-list-item>
             <md-list-item>
               <md-button href="#/dashboard" ng-class="isActivePage('dashboard')">
-                <md-icon md-font-set="material-icons" class="menu-item">dashboard</md-icon>
+                <md-icon md-font-set="fas fa-table fa-fw" class="menu-item"></md-icon>
                 Dashboard
               </md-button>
             </md-list-item>
             <md-list-item>
+              <md-button href="#/ports" ng-class="isActivePage('ports')">
+                <md-icon md-font-set="fas fa-list fa-fw" class="menu-item"></md-icon>
+                Ports
+              </md-button>
+            </md-list-item>
+            <md-list-item>
               <md-button href="#/blocks" ng-class="isActivePage('blocks')">
-                <md-icon md-font-set="material-icons" class="menu-item">reorder</md-icon>
+                <md-icon md-font-set="fas fa-th-large fa-fw" class="menu-item"></md-icon>
                 Blocks
               </md-button>
             </md-list-item>
             <md-list-item>
               <md-button href="#/payments" ng-class="isActivePage('payments')">
-                <md-icon md-font-set="material-icons" class="menu-item">payments</md-icon>
+                <md-icon md-font-set="fas fa-money-bill-alt fa-fw" class="menu-item"></md-icon>
                 Payments
               </md-button>
             </md-list-item>
             <md-list-item>
-              <md-button href="#/ports" ng-class="isActivePage('ports')">
-                 <md-icon md-font-set="material-icons" class="menu-item">flight_land</md-icon>
-                 Ports
-              </md-button>
-            </md-list-item>
-            <md-list-item>
-              <md-button href="#/help/chat" ng-class="isActivePage('support')">
-                <md-icon md-font-set="material-icons" class="menu-item">group</md-icon>
-                Global Support
-              </md-button>
-            </md-list-item>
-            <md-list-item>
               <md-button href="#/help/getting_started" ng-class="isActivePage('help/getting_started')">
-                <md-icon md-font-set="material-icons" class="menu-item">launch</md-icon>
+                <md-icon md-font-set="far fa-question-circle fa-fw" class="menu-item"></md-icon>
                 Getting Started
               </md-button>
             </md-list-item>
@@ -105,8 +106,8 @@
           </md-toolbar>
           <div id="content" ng-view flex></div>
 		<div class="footer">
-		powered by <strong><a href="https://github.com/Snipa22/nodejs-pool"><i class="fa fa-github"></i> nodejs-pool</a></strong> &amp; <strong><a href="https://github.com/mesh0000/poolui"><i class="fa fa-github"></i> poolui</a></strong></span>
-		</div>
+            powered by <strong><a href="https://github.com/Snipa22/nodejs-pool"><i class="fab fa-github-alt"></i> nodejs-pool</a></strong> &amp; <strong><a href="https://github.com/mesh0000/poolui"><i class="fab fa-github-alt"></i> poolui</a></strong>
+        </div>
         </md-content>
       </div>
       <!-- Scripts -->

@@ -4,7 +4,7 @@ app.controller('HomeCtrl', function ($scope, $route, dataService, timerService) 
     dataService.getData('/pool/chart/hashrate/pplns', function (data) {
       data = _.forEach(data, function (element) {
         element.ts = new Date(element.ts);
-        element.hs /= element.hs;
+        element.hs /= 1000;
       });
 
       $scope.poolHashrateChart = {
@@ -17,7 +17,7 @@ app.controller('HomeCtrl', function ($scope, $route, dataService, timerService) 
               dataset: 'global',
               label: 'Total Pool Hashrate',
               key: 'hs',
-              color: 'red',
+              color: '#AA0000',
               type: ['line', 'area']
             }
           ],
@@ -53,7 +53,7 @@ app.controller('HomeCtrl', function ($scope, $route, dataService, timerService) 
               label: 'Effort',
               interpolation: {mode: 'bundle', tension: 1},
               key: 'value',
-              color: 'green',
+              color: '#006600',
               type: ['line']
             },
             {
@@ -93,7 +93,7 @@ app.controller('HomeCtrl', function ($scope, $route, dataService, timerService) 
               dataset: 'global',
               label: 'Total Pool Miners',
               key: 'cn',
-              color: 'green',
+              color: '#006600',
               type: ['line', 'area']
             }
           ],

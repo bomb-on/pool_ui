@@ -1,79 +1,161 @@
-/*** Global Styles ***/
-/* Colors
-rgb(44,55,66) ebony clay
-rgb(0,130,130) teal
-rgb(255,160,0) orange peel
-rgb(225,225,225) mercury
-rgb(235,235,235) gallery
-*/
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,700');
 
 html, body {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-size:14px;
-  margin: 0px;
-  padding: 0px;
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13px;
+  margin: 0;
+  padding: 0;
   min-width: 360px;
 }
 
+md-card *,
+md-content *,
+::placeholder {
+  /*color: rgb(221, 208, 229) !important;*/
+  text-shadow: 1px 1px 1px rgba(55, 54, 58, 0.2);
+}
+
+table.md-table,
+th.md-column,
+md-subhead,
+md-list *,
+md-table-pagination *,
+md-pagination-wrapper *,
+md-select *,
+md-button {
+  /*color: rgb(255, 255, 255) !important;*/
+}
+.md-button[disabled] {
+  color: rgba(255, 255, 255, 0.4) !important;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  text-decoration: none;
+}
+
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  transition: color .3s;
+  color: rgb(76, 184, 96) !important;
+}
+
+a:hover {
+  transition: color .3s;
+  color: rgb(20, 127, 33) !important;;
+}
+
+/*
 a {
   transition: color .4s;
-  color: rgb(0, 130, 130); 
+  color: rgb(92, 72, 113);
 }
 
-a:link { text-decoration: none; },
-a:visited { color: rgb(255, 160, 0); } 
-a:hover   { color: rgb(255, 160, 0); }
+a:link { text-decoration: none; }
+a:visited { color: rgb(92, 72, 113); }
+a:hover   { color: rgb(255, 255, 255); }
 a:active  {
   transition: color .3s;
-  color: rgb(204, 122, 0);
+  color: rgb(92, 72, 113);
+}
+*/
+.panel-subtitle {
+  font-weight: bold;
+  font-size: 110%;
 }
 
- .panel-subtitle {
-	 font-weight: bold;
-	 font-size: 110%;
- }
- 
- .footer {
-	 text-align: center;
-	 font-size: 90%;
-	 padding-bottom: 40px;
- }
- 
+.footer {
+  text-align: center;
+  font-size: 90%;
+  padding-bottom: 40px;
+}
+
 /*** Material Styles ***/
 
 .md-headline {
-    font-size: 20px;
+  font-size: 18px;
 }
 
 md-sidenav {
-	max-width: 220px;
-	min-width: 220px;
+  max-width: 220px;
+  min-width: 220px;
 }
 
 md-toolbar {
-	background-color: rgb(0, 130, 130) !important;
-	font-size: 14px;
+  font-size: 14px;
+}
+
+md-toolbar * {
+  color: rgb(222, 222, 222) !important;
 }
 
 .md-button {
-	min-width: 36px;
+  min-width: 36px;
+}
+
+.md-button.md-default-theme.md-accent.md-fab,
+.md-button.md-accent.md-fab,
+.md-button.md-default-theme.md-accent.md-raised,
+.md-button.md-accent.md-raised,
+md-toolbar.md-default-theme:not(.md-menu-toolbar).md-accent .md-ink-ripple,
+md-toolbar:not(.md-menu-toolbar).md-accent .md-ink-ripple,
+.md-button.md-default-theme.md-primary.md-fab,
+.md-button.md-primary.md-fab,
+.md-button.md-default-theme.md-primary.md-raised,
+.md-button.md-primary.md-raised  {
+  background-color: rgb(52, 163, 55);
+}
+
+.md-button.md-accent.md-raised:not([disabled]):hover,
+.md-button.md-fab:not([disabled]):hover,
+.md-button.md-default-theme.md-primary.md-fab:not([disabled]).md-focused,
+.md-button.md-primary.md-fab:not([disabled]).md-focused,
+.md-button.md-default-theme.md-primary.md-fab:not([disabled]):hover,
+.md-button.md-primary.md-fab:not([disabled]):hover,
+.md-button.md-default-theme.md-primary.md-raised:not([disabled]).md-focused,
+.md-button.md-primary.md-raised:not([disabled]).md-focused,
+.md-button.md-default-theme.md-primary.md-raised:not([disabled]):hover,
+.md-button.md-primary.md-raised:not([disabled]):hover {
+  background-color: rgb(42, 132, 44);
+}
+
+md-toolbar.md-default-theme:not(.md-menu-toolbar), md-toolbar:not(.md-menu-toolbar) {
+  background-color: rgb(42, 132, 44);
+}
+
+md-content.md-default-theme, md-content {
+  /*background-color: rgb(104, 65, 127);*/
+}
+
+md-dialog.md-default-theme, md-dialog {
+  /*background-color: rgb(104, 65, 127);*/
 }
 
 .material-icons {
-	color: rgb(255, 160, 0);
+  color: rgb(76, 184, 96);
 }
 
 #main {
-  background: rgb(240, 240, 240); 
+  /*background: rgb(131, 58, 169);*/
 }
 
 .maintoolbar {
-  background-color: rgb(0, 130, 130); 
+  background-color: rgb(31, 98, 33);
   color: rgb(255, 255, 255);
- }
+}
 
 .maintoolbar span {
 
+}
+
+md-card {
+  /*background-color: rgb(166, 126, 190);*/
 }
 
 .statsbar md-card-title-text{
@@ -89,16 +171,20 @@ md-toolbar {
 }
 
 .md-title {
-	color: white;
+  color: white;
+}
+
+.md-subheader {
+  background-color: rgb(42, 132, 44);
 }
 
 .luck {
-text-allign: right;
-padding: 0 0 0 56px
+  text-allign: right;
+  padding: 0 0 0 56px
 }
 
 .md-divider {
-	color: white;
+  color: white;
 }
 
 md-tooltip .md-content {
@@ -106,12 +192,13 @@ md-tooltip .md-content {
 }
 
 .md-tooltip {
-	font-size: 100%;
-	height: auto !important;
+  font-size: 100%;
+  height: auto !important;
 }
 
 .sidenav {
-  background-color: rgb(44,55,66);
+  background-color: rgb(63, 81, 86);
+  color: rgb(255, 255, 255);
 }
 
 .sidenav ul{
@@ -122,10 +209,24 @@ md-tooltip .md-content {
   padding: 0px;
 }
 
+.sidenav md-list-item .pool-item {
+  margin-left: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+}
+
+.sidenav md-list-item .pool-item img {
+  width: 24px;
+  height: 24px;
+  margin-right: 10px;
+}
+
 .sidenav a {
   width: 100%;
   text-align: left;
-  color: #fff;
+  color: rgb(255, 255, 255) !important;
   margin: 0px;
 }
 
@@ -140,7 +241,7 @@ md-tooltip .md-content {
 .sidebar {
   display: flex;
   flex-wrap: nowrap;
-  box-sizing: border-box; 
+  box-sizing: border-box;
 }
 
 .sidebar a {
@@ -151,7 +252,7 @@ md-tooltip .md-content {
   font-weight: 400;
   line-height: 24px;
   letter-spacing: 0;
-  opacity: 0.87; 
+  opacity: 0.87;
 }
 
 .sidebar md-icon, .sidebar ng-md-icon {
@@ -164,35 +265,36 @@ md-tooltip .md-content {
 }
 
 .logo {
-  background: rgb(30,30,30) !important;
+  background: rgb(11, 13, 23) !important;
   color: rgb(255, 255, 255) !important;
   font-size: 20px;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.3);
 }
 
 .setup-text {
-	color: white;
-	font-weight: 600;
+  color: white;
+  font-weight: 600;
 }
 
 @media (max-width: 400px) {
-	.setup-text {
-		display: none;
-	}
-	
-	.maintoolbar span {
-		font-size: 14px;
-	}
-}	
+  .setup-text {
+    display: none;
+  }
+
+  .maintoolbar span {
+    font-size: 14px;
+  }
+}
 
 /* HELPERS */
 .welcome p {
-	padding-left: 25px;
-	margin-top: 2px;
+  padding-left: 25px;
+  margin-top: 2px;
 }
 
 .welcome h3 {
-	padding-bottom: 0;
-	margin-bottom: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
 }
 
 .text-left {
@@ -221,21 +323,21 @@ md-tooltip .md-content {
 }
 
 .frac { display: inline-block;
-    position: relative;
-    vertical-align: middle;
-    letter-spacing: 0.001em;
-    text-align: center;
+  position: relative;
+  vertical-align: middle;
+  letter-spacing: 0.001em;
+  text-align: center;
 }
 .frac > span {
-    display: block;
-    padding: 0.1em;
+  display: block;
+  padding: 0.1em;
 }
 .frac span.bottom {
-    border-top: thin solid;
+  border-top: thin solid;
 }
 .frac span.symbol {
-    display: none;
-} 
+  display: none;
+}
 
 .hide-error-msg .md-errors-spacer{
   display: none
@@ -254,7 +356,9 @@ md-tooltip .md-content {
   -webkit-transform: scale(0.60);
   -moz-transform:scale(0.60);
   font-size: 64px !important;
-  color: rgb(255, 160, 0);
+}
+.menu-item path {
+  color: rgb(76, 184, 96) !important;
 }
 
 .valid {
@@ -270,8 +374,8 @@ md-tooltip .md-content {
 }
 
 .navbar .login {
- color: #fff !important;
- font-size: 20px;
+  color: #fff !important;
+  font-size: 20px;
 }
 
 /* CHARTS */
@@ -304,19 +408,19 @@ md-dialog .login {
 }
 
 .console {
-	height: 300px;
-	min-width: 500px;
+  height: 300px;
+  min-width: 500px;
 }
 
 @media (max-width: 600px) {
-	.console {
-		height: 300px;
-		min-width: 100%;
-	}
-	
-	md-dialog .login {
-		min-width: 100% !important;
-	}
+  .console {
+    height: 300px;
+    min-width: 100%;
+  }
+
+  md-dialog .login {
+    min-width: 100% !important;
+  }
 }
 
 .no-padding {
@@ -350,4 +454,13 @@ md-dialog .login {
 
 .theironfist {
   cursor: pointer;
+}
+
+.md-table-toolbar {
+  background-color: rgb(66, 152, 76) !important;
+}
+
+.chart *[style], .chart *[font-family] {
+  font-family: 'IBM Plex Sans', sans-serif !important;
+  -webkit-font-smoothing: antialiased;
 }
